@@ -23,7 +23,7 @@ function NavButton({ icon: Icon, label, href, isActive }: Props) {
       variant="ghost"
       aria-label={label}
       title={label}
-      className={`cursor-pointer hover:bg-accent/50 p-6 h-max w-max`}
+      className={`hover:bg-accent/50 sm:p-6 p-4 h-max w-max`}
       asChild
     >
       {href ? (

@@ -23,7 +23,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <Header />
-          <div className="mx-auto w-full max-w-7xl px-4 py-2">{children}</div>
+          <div className="mx-auto w-full max-w-4xl">{children}</div>
         </ThemeProvider>
       </body>
     </html>

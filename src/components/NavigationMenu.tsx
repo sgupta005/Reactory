@@ -16,7 +16,7 @@ function NavigationMenu() {
   const pathname = usePathname();
 
   return (
-    <nav className="flex items-center sm:gap-4 fixed sm:static bottom-0 bg-background w-full sm:w-max justify-around">
+    <nav className="flex items-center sm:gap-4 fixed sm:static bottom-0 bg-background sm:bg-transparent w-full sm:w-max justify-around py-1">
       {navigationItems.map((item) => (
         <NavButton
           key={item.label}
