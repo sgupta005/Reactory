@@ -17,7 +17,7 @@ import { FIELD_NAMES } from '../constants';
 import Link from 'next/link';
 
 interface Props<T extends FieldValues> {
-  type: 'SIGN_IN ' | 'SIGN_UP';
+  type: 'SIGN_IN' | 'SIGN_UP';
   defaultValues: DefaultValues<T>;
   schema: ZodType<T>;
   onSubmit: (data: T) => Promise<{ success: boolean; error?: string }>;
@@ -29,7 +29,7 @@ function AuthForm<T extends FieldValues>({
   defaultValues,
   onSubmit,
 }: Props<T>) {
-  const isSignIn = type === 'SIGN_IN ';
+  const isSignIn = type === 'SIGN_IN';
   const form = useForm<z.infer<typeof schema>>({
     resolver: zodResolver(schema),
     defaultValues,
