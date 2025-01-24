@@ -1,6 +1,5 @@
 import type { Metadata } from 'next';
 import './globals.css';
-import Header from '@/components/Header';
 import { ThemeProvider } from '@/components/theme-provider';
 
 export const metadata: Metadata = {
@@ -22,8 +21,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <Header />
-          <div className="mx-auto w-full max-w-4xl">{children}</div>
+          {children}
         </ThemeProvider>
       </body>
     </html>
