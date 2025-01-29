@@ -13,7 +13,7 @@ import {
 } from '@/components/ui/form';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-import { FIELD_NAMES } from '../constants';
+import { FIELD_NAMES, FIELD_TYPES } from '../constants';
 import Link from 'next/link';
 
 interface Props<T extends FieldValues> {
@@ -65,6 +65,7 @@ function AuthForm<T extends FieldValues>({
                   </FormLabel>
                   <FormControl>
                     <Input
+                      type={FIELD_TYPES[field.name as keyof typeof FIELD_TYPES]}
                       placeholder={
                         FIELD_NAMES[field.name as keyof typeof FIELD_NAMES]
                       }
